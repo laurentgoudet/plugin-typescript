@@ -8,7 +8,7 @@ import {isTypescript, isTypescriptDeclaration, stripDoubleExtension, hasError} f
 const logger = new Logger({ debug: false });
 let factory: Promise<FactoryOutput> = null;
 
-function getFactory() {
+export function getFactory() {
 	// persist factory between instantiations of the plugin and expose it to the world
 	const __global: any = typeof(self) !== 'undefined' ? self : global;
 	__global.tsfactory = __global.tsfactory || createFactory(System.typescriptOptions, false, _resolve, _fetch, _lookup)
