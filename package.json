@@ -43,7 +43,7 @@
     "tslib": "github:frankwallis/tslib"
   },
   "scripts": {
-    "bundle": "tsc && tsc -d --outFile ./lib/plugin.js -m system && rollup -c && tsc ./tmp/plugin.js -m system -lib es6 -allowJs -allowUnreachableCode -removeComments -outDir ./lib",
+    "bundle": "tsc -d && rollup -c && cp ./tmp/es6/plugin.d.ts ./lib/plugin.d.ts && tsc ./tmp/plugin.js -m system -lib es6 -allowJs -allowUnreachableCode -removeComments -outDir ./lib",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "test": "mocha --require ./test/environment --timeout 10000 ./test/*.ts"
   },
