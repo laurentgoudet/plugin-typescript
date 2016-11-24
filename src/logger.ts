@@ -1,5 +1,5 @@
 /* */
-type LoggerOptions = {
+export type LoggerOptions =  {
    debug?: boolean;
 }
 
