@@ -10,7 +10,7 @@ let includePathOptions = {
 };
 
 export default {
-    entry: './tmp/es6/plugin.js',
+    entry: './lib/es6/plugin.js',
     format: 'es',
     dest: 'tmp/plugin.js',
     plugins: [ includePaths(includePathOptions) ],
